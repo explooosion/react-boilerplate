@@ -1,6 +1,6 @@
 import { call, put, takeLatest } from 'redux-saga/effects';
 
-import { FETCH_EXAMPLE, FETCH_EXAMPLE_SUCCESS, FETCH_EXAMPLE_ERROR } from '../reducers/users';
+import { FETCH_EXAMPLE, FETCH_EXAMPLE_SUCCESS, FETCH_EXAMPLE_ERROR } from '../reducers/example';
 
 import { getExample } from '../services/Example';
 

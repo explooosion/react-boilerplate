@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-import { EXAMPLE, EXAMPLE_SUCCESS, EXAMPLE_ERROR } from '../reducers/products';
+import { FETCH_EXAMPLE, FETCH_EXAMPLE_SUCCESS, FETCH_EXAMPLE_ERROR } from '../reducers/example';
 
 const URL = '';
 
@@ -16,9 +16,9 @@ export const getUsers = async () =>
  * FETCH EXAMPLE - redux thunk
  */
 export const getExample = () => async dispatch => {
-  await dispatch({ type: EXAMPLE });
+  await dispatch({ type: FETCH_EXAMPLE });
   await axios
     .get(URL)
-    .then(res => dispatch({ type: EXAMPLE_SUCCESS, payload: res.data }))
-    .catch(res => dispatch({ type: EXAMPLE_ERROR, payload: res }))
+    .then(res => dispatch({ type: FETCH_EXAMPLE_SUCCESS, payload: res.data }))
+    .catch(res => dispatch({ type: FETCH_EXAMPLE_ERROR, payload: res }))
 }
