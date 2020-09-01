@@ -5,7 +5,15 @@ import { EXAMPLE, EXAMPLE_SUCCESS, EXAMPLE_ERROR } from '../reducers/products';
 const URL = '';
 
 /**
- * FETCH EXAMPLE
+ * FETCH USERS - redux saga
+ */
+export const getUsers = async () =>
+  await axios.get(URL)
+    .then(res => res)
+    .catch(err => err);
+
+/**
+ * FETCH EXAMPLE - redux thunk
  */
 export const getExample = () => async dispatch => {
   await dispatch({ type: EXAMPLE });
