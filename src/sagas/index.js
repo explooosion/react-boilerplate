@@ -1,7 +1,7 @@
 import { all } from 'redux-saga/effects';
 
 const sagas = [
-  'example'
+  'example',
 ];
 
 const Sagas = sagas.map(saga => require(`./${saga}`).default());

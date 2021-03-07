@@ -8,7 +8,7 @@ const URL = '';
  * FETCH USERS - redux saga
  */
 export const getUsers = async () =>
-  await axios.get(URL)
+    axios.get(URL)
     .then(res => res)
     .catch(err => err);
 

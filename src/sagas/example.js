@@ -15,6 +15,6 @@ function* fetchExample() {
   }
 }
 
-export default function* () {
+export default function* Example() {
   yield takeLatest(FETCH_EXAMPLE, fetchExample);
 }
